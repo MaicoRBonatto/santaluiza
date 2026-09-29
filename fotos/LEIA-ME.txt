@@ -1,0 +1,2 @@
+Coloque aqui as fotos da comunidade, com os mesmos nomes do index.html (ex.: 1962-primeira-casa.jpg).
+Sem a foto, o site mostra um quadro colorido no lugar.
