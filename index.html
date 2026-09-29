@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Santa Luzia do Rio Claro: o que aconteceu aqui?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F0F2FF;--ink:#141428;--card:#FFFFFF;--blue:#2B3BFF;--lime:#C6F432;--pink:#FF5FA2;--onblue:#FFFFFF;--c:#2B3BFF;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1020;--ink:#F1F1FF;--card:#1A1B33;--blue:#7A86FF;--onblue:#0F1020}}
+:root[data-theme="dark"]{--bg:#0F1020;--ink:#F1F1FF;--card:#1A1B33;--blue:#7A86FF;--onblue:#0F1020}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.55 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;line-height:1;margin:0;letter-spacing:-.02em}
+:focus-visible{outline:4px solid var(--pink);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.stk{border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);border-radius:14px}
+nav{padding:18px 0;display:flex;justify-content:space-between;align-items:center;font-weight:700}
+nav a{color:var(--ink);text-decoration:none;margin-left:18px}
+nav a:hover{text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:var(--pink)}
+.hero{padding:28px 0 64px}
+.hero h1{font-size:clamp(2.6rem,8vw,5.6rem);max-width:13ch}
+.hero .sub{max-width:44ch;margin:18px 0 32px;font-size:1.2rem}
+.time{background:var(--c);color:#fff;padding:26px;transition:background .4s;display:grid;gap:20px}
+@media(min-width:820px){.time{grid-template-columns:1.1fr 1fr;align-items:center;padding:34px}}
+.year{font:800 clamp(5.5rem,21vw,11rem)/.85 "Bricolage Grotesque",sans-serif;letter-spacing:-.04em;color:var(--lime)}
+.time h2{font-size:1.8rem;margin:12px 0 8px;color:#fff}
+.time p{margin:0;min-height:5.2em}
+input[type=range]{width:100%;accent-color:var(--lime);height:36px;margin:0}
+.ticks{display:flex;justify-content:space-between;font-weight:700;font-size:14px;padding:0 4px;color:#fff}
+.hint{font-weight:700;margin-top:10px;color:#fff}
+.ph{position:relative;overflow:hidden;background:var(--pc,#7FA9A8)}
+.ph svg{position:absolute;inset:0;width:100%;height:100%}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph.ok svg{display:none}
+.side{aspect-ratio:1/1;border:3px solid #fff;border-radius:10px;transform:rotate(3deg)}
+section{padding:60px 0}
+h2.big{font-size:clamp(2rem,5.5vw,3.6rem);margin-bottom:10px}
+.lead{max-width:52ch;margin:0 0 34px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:26px}
+.card{all:unset;display:block;cursor:pointer;perspective:900px;aspect-ratio:3/4;border-radius:14px}
+.card:focus-visible{outline:4px solid var(--pink);outline-offset:4px}
+.in{display:block;position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .6s}
+.card[aria-pressed="true"] .in{transform:rotateY(180deg)}
+.f{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;background:var(--card);display:flex;flex-direction:column}
+.front .ph{flex:1}
+.front b,.back b{font:800 1.5rem "Bricolage Grotesque",sans-serif}
+.front span.cap{padding:10px 14px 12px;display:block}
+.front span.cap small{display:block;font-size:14px;opacity:.75}
+.back{transform:rotateY(180deg);background:var(--lime);color:#141428;padding:20px;justify-content:space-between}
+.back span.t{font-size:1.05rem;line-height:1.4}
+.back small{font-weight:700}
+.tap{position:absolute;right:10px;top:10px;background:var(--pink);color:#141428;font:700 13px "DM Sans";padding:4px 10px;border-radius:99px;border:2px solid #141428}
+@media(prefers-reduced-motion:reduce){.in,.time{transition:none}}
+.chat{display:grid;gap:18px;max-width:760px}
+.who{display:flex;gap:12px;align-items:flex-end}
+.who.r{flex-direction:row-reverse}
+.av{flex:none;width:46px;height:46px;border-radius:50%;background:var(--pink);border:3px solid var(--ink);display:grid;place-items:center;font:800 1rem "Bricolage Grotesque",sans-serif;color:#141428}
+.bub{background:var(--card);padding:16px 20px;border-radius:20px 20px 20px 4px;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);font-size:1.15rem}
+.who.r .bub{border-radius:20px 20px 4px 20px;background:var(--blue);color:var(--onblue)}
+.bub small{display:block;margin-top:8px;font-weight:700;font-size:14px;opacity:.85}
+.quiz{background:var(--lime);color:#141428;padding:30px}
+.quiz h2{font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:18px}
+.opts{display:flex;flex-wrap:wrap;gap:12px}
+.opts button{font:700 1.2rem "DM Sans";padding:12px 24px;border-radius:99px;border:3px solid #141428;background:#fff;color:#141428;cursor:pointer}
+.opts button.right{background:#141428;color:var(--lime)}
+.opts button.wrong{opacity:.4}
+#ans{margin:16px 0 0;font-weight:700;min-height:1.6em}
+.cta{background:var(--pink);color:#141428;padding:36px 28px}
+.cta h2{font-size:clamp(1.8rem,5vw,3rem);margin-bottom:14px}
+.cta p{max-width:48ch;margin:0 0 22px}
+.cta a{display:inline-block;background:#141428;color:#fff;font-weight:700;padding:14px 26px;border-radius:99px;text-decoration:none}
+footer{padding:20px 0 48px;font-size:14px;opacity:.75}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><strong>Santa Luzia do Rio Claro</strong><span><a href="#fotos">Fotos</a><a href="#relatos">Relatos</a><a href="#quiz">Desafio</a></span></nav>
+
+<div class="hero">
+<h1>Este lugar tem 60 anos. Você sabe o que aconteceu aqui?</h1>
+<p class="sub">Arraste o tempo e descubra como algumas casas na beira do rio viraram uma comunidade.</p>
+<div class="time stk" id="time">
+<div><div class="year" id="yr" aria-live="polite">1962</div>
+<h2 id="tt"></h2><p id="td"></p></div>
+<div>
+<div class="ph side" id="sp"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 72 Q25 62 50 72 T100 70 V100 H0Z" fill="rgba(0,0,0,.2)"/><circle cx="76" cy="24" r="9" fill="rgba(255,255,255,.6)"/></svg></div>
+</div>
+<div style="grid-column:1/-1"><input type="range" id="rg" min="0" max="4" step="1" value="0" aria-label="Escolha um ano da história"><div class="ticks" aria-hidden="true"><span>1962</span><span>1978</span><span>1994</span><span>2008</span><span>2021</span></div><div class="hint">Arraste o botão para viajar no tempo</div></div>
+</div>
+</div>
+
+<section id="fotos">
+<h2 class="big">Toque numa foto para virar</h2>
+<p class="lead">Atrás de cada imagem tem uma história que só quem viveu conta.</p>
+<div class="grid" id="grid"></div>
+</section>
+
+<section id="relatos">
+<h2 class="big">Quem viveu conta</h2>
+<p class="lead">Relatos gravados com moradores, do jeitinho que foram falados.</p>
+<div class="chat">
+<div class="who"><div class="av">O</div><div class="bub">Quando cheguei, o rio era a nossa rua. A gente ia de canoa na casa da vizinha e voltava com pão quente.<small>Seu Otávio, 81 anos, na comunidade desde 1962</small></div></div>
+<div class="who r"><div class="av">M</div><div class="bub">Aprendi a ler numa sala emprestada, sentada no chão. Hoje ensino minha neta na mesma mesa.<small>Dona Marta, 63 anos, aluna da primeira turma</small></div></div>
+<div class="who"><div class="av">R</div><div class="bub">Água na torneira mudou tudo. Minha mãe parou de carregar balde e a gente ganhou tempo pra estudar.<small>Rosana, 44 anos, filha de fundadores da associação</small></div></div>
+</div>
+</section>
+
+<section id="quiz">
+<div class="quiz stk">
+<h2>Desafio: quantos alunos tinha a primeira turma da escola?</h2>
+<div class="opts" id="opts"><button data-v="12">12</button><button data-v="22">22</button><button data-v="40">40</button></div>
+<p id="ans" aria-live="polite"></p>
+</div>
+</section>
+
+<section>
+<div class="cta stk">
+<h2>Tem uma foto esquecida numa gaveta?</h2>
+<p>Mande a imagem ou grave um relato curto. Ela entra no arquivo com o nome de quem trouxe.</p>
+<a href="mailto:memoria@exemplo.com.br">Enviar minha contribuição</a>
+</div>
+</section>
+<footer>Página de exemplo com dados fictícios. Troque textos e fotos pelos da sua comunidade.</footer>
+</div>
+
+<script>
+var ev=[
+{y:1962,t:"As primeiras casas",d:"Três famílias de pescadores constroem casas de madeira na margem do rio e abrem o caminho até a estrada.",c:"#2B3BFF",p:"#7FA9A8",f:"1962-primeira-casa.jpg"},
+{y:1978,t:"A escola chega",d:"Uma sala cedida pela capela vira escola. Dona Lourdes ensina 22 crianças de idades diferentes juntas.",c:"#7A2BFF",p:"#D9B26F",f:"1978-primeira-escola.jpg"},
+{y:1994,t:"Água na torneira",d:"Depois de dois anos de mutirões e reuniões, a associação de moradores consegue a rede de água encanada.",c:"#0B7A75",p:"#A9B98F",f:"1994-mutirao-agua.jpg"},
+{y:2008,t:"Nasce a festa da colheita",d:"A mesa comprida na rua principal vira tradição e hoje reúne a comunidade e visitantes dos bairros vizinhos.",c:"#D6336C",p:"#C98F6B",f:"2008-festa-colheita.jpg"},
+{y:2021,t:"A memória vira projeto",d:"Cada família traz suas fotos para serem digitalizadas e catalogadas. É o começo deste arquivo.",c:"#2B3BFF",p:"#8FA0B9",f:"2021-digitalizacao.jpg"}];
+var ph=[
+["1962","Primeira casa à beira do rio","Construída em mutirão por três famílias. O rio era a rua principal.","#7FA9A8","1962-primeira-casa.jpg"],
+["1970","Barcos na margem","A pesca sustentava quase todas as casas da vila.","#8FA0B9","1970-barcos.jpg"],
+["1978","Turma da primeira escola","22 alunos, uma sala e uma única professora.","#D9B26F","1978-primeira-escola.jpg"],
+["1985","Procissão da capela","O encontro anual que juntava todo mundo.","#C98F6B","1985-procissao.jpg"],
+["1994","Mutirão da água","Homens e mulheres abrindo valas com enxada.","#A9B98F","1994-mutirao-agua.jpg"],
+["1997","Inauguração da associação","A primeira diretoria foi eleita numa mesa de bar emprestada.","#7FA9A8","1997-associacao.jpg"],
+["2008","Primeira festa da colheita","Faltou prato, sobrou comida. Virou tradição.","#D9B26F","2008-festa-colheita.jpg"],
+["2015","Campinho reformado","A garotada montou o time e deu nome pra ele.","#8FA0B9","2015-campinho.jpg"]];
+var sv='<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 72 Q25 62 50 72 T100 70 V100 H0Z" fill="rgba(0,0,0,.18)"/><circle cx="76" cy="24" r="9" fill="rgba(255,255,255,.55)"/></svg>';
+function img(f,a){return '<img src="fotos/'+f+'" alt="'+a+'" loading="lazy" onload="this.parentNode.classList.add(\'ok\')" onerror="this.remove()">'}
+var rg=document.getElementById("rg"),tm=document.getElementById("time"),sp=document.getElementById("sp");
+function show(i){var e=ev[i];document.getElementById("yr").textContent=e.y;document.getElementById("tt").textContent=e.t;document.getElementById("td").textContent=e.d;tm.style.setProperty("--c",e.c);sp.style.setProperty("--pc",e.p);sp.classList.remove("ok");sp.querySelectorAll("img").forEach(function(x){x.remove()});sp.insertAdjacentHTML("beforeend",img(e.f,e.t));}
+rg.addEventListener("input",function(){show(+rg.value)});show(0);
+var gr=document.getElementById("grid");
+ph.forEach(function(p){
+var b=document.createElement("button");b.className="card";b.setAttribute("aria-pressed","false");b.setAttribute("aria-label","Foto de "+p[0]+": "+p[1]+". Toque para ler a história.");
+b.innerHTML='<span class="in"><span class="f front stk"><span class="ph" style="--pc:'+p[3]+'">'+sv+img(p[4],p[1])+'</span><span class="cap"><b>'+p[0]+'</b><small>'+p[1]+'</small></span><span class="tap">virar</span></span><span class="f back stk"><b>'+p[0]+'</b><span class="t">'+p[2]+'</span><small>Toque para voltar</small></span></span>';
+b.addEventListener("click",function(){b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")==="true"?"false":"true")});
+gr.appendChild(b);});
+document.querySelectorAll("#opts button").forEach(function(b){b.addEventListener("click",function(){
+document.querySelectorAll("#opts button").forEach(function(x){x.classList.toggle("right",x.dataset.v==="22");x.classList.toggle("wrong",x.dataset.v!=="22")});
+document.getElementById("ans").textContent=b.dataset.v==="22"?"Acertou! Eram 22 crianças de idades diferentes na mesma sala.":"Quase! Eram 22 crianças de idades diferentes na mesma sala."});});
+</script>
+</body>
+</html>
